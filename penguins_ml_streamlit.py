@@ -8,6 +8,10 @@ with open('random_forest_penguin.pickle', 'rb') as f:
 with open('output_penguin.pickle', 'rb') as f:
     uniques = pickle.load(f)
 
+# Add some information to the app
+st.title('Palmer\'s Penguins app')
+st.header('Demonstrating Streamlit Sharing')
+
 # Get user input for the features!
 island = st.selectbox('Penguin Island:', options=['Biscoe', 'Dream', 'Torgerson'])
 sex = st.selectbox('Penguin Sex:', options=['Female', 'Male'])
