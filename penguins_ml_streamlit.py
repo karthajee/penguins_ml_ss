@@ -12,6 +12,11 @@ with open('output_penguin.pickle', 'rb') as f:
 st.title('Palmer\'s Penguins app')
 st.header('Demonstrating Streamlit Sharing')
 
+# Add password checking
+password_check = st.text_input('Enter the password:')
+if password_check != 'password':
+    st.stop()
+
 # Get user input for the features!
 island = st.selectbox('Penguin Island:', options=['Biscoe', 'Dream', 'Torgerson'])
 sex = st.selectbox('Penguin Sex:', options=['Female', 'Male'])
