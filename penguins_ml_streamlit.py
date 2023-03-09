@@ -14,7 +14,7 @@ st.header('Demonstrating Streamlit Sharing')
 
 # Add password checking
 password_check = st.text_input('Enter the password:')
-if password_check != 'password':
+if password_check != st.secrets['password']:
     st.stop()
 
 # Get user input for the features!
